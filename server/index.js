@@ -1,20 +1,15 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3001
 
-app.get('/add', (req, res) => {
-  console.log('REQ: ' , req.body)  
+app.use(express.json())
 
-  const resp = 'Correct!'
-  res.send(resp)
+app.post('/log', (req, res) => {
+  console.log('Request:\n' , req.body)  
+  console.log('Response Status' , res.statusCode, '\n===\n')
 
-  console.log('RESP:' , resp)
+  res.send()
 })
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

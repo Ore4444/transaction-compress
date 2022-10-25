@@ -3,6 +3,8 @@ import { logServer } from '../utilities'
 import './Button.scss'
 interface Props {
   label: string
+  href?: string
+  download?: string
 }
 
 function Button(props: Props) {
@@ -10,7 +12,11 @@ function Button(props: Props) {
     logServer(event.type, props.label)
   }
 
-  return <button className="btn btn-primary" onClick={onClick}>{props.label}</button>
+  return <a className="btn btn-primary"
+    href={props.href || '#'}
+    download={props.download || null}
+    onClick={onClick}
+  >{props.label}</a>
 }
 
 export default Button

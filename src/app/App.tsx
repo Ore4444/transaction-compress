@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.scss';
-import Button from './components/Button';
+import Button from '../components/Button';
+import ButtonDownload from './ButtonDownload';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           <Button label="Add new Transaction" />
+          <ButtonDownload />
         </p>
         
       </header>

@@ -1,10 +1,4 @@
-export type Amount = number
-
-export interface Transaction {
-  tradingParty: string
-  counterparty: string
-  amount: Amount
-}
+import { Transaction, Transactions, Amount } from "./types"
 
 const canCompressTwo = (tr1: Transaction, tr2: Transaction): boolean => {
   return tr1.counterparty === tr2.counterparty
@@ -13,8 +7,6 @@ const canCompressTwo = (tr1: Transaction, tr2: Transaction): boolean => {
 const compressAmount = (tr: Transaction, amount: Amount): Transaction => {
   return {...tr, ...{amount: tr.amount + amount}}
 }
-
-export type Transactions = Array<Transaction>
 
 export const compressTransactions = (transactions: Transactions): Transactions => {
   return transactions.reduce<Transactions>((before, now) => {

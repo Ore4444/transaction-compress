@@ -1,5 +1,6 @@
 import Button from '../components/Button';
-import { compressTransactions, Transactions } from '../logic';
+import { compressTransactions } from '../logic';
+import { Transactions } from '../types';
 import { objectsDataToCsvURI } from '../utilities';
 
 interface Props {

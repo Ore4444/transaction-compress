@@ -1,4 +1,4 @@
-import { Transactions } from "../logic"
+import { Transactions } from "../types"
 
 interface Props {
   data: Transactions

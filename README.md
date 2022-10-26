@@ -1,3 +1,15 @@
+# How to start server
+
+### `cd server && npm start`
+
+# Docs I used
+
+* https://reactjs.org/docs/
+* https://create-react-app.dev/docs/documentation-intro/
+* https://testing-library.com/docs/
+* https://react-typescript-cheatsheet.netlify.app/
+* https://getbootstrap.com/docs/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

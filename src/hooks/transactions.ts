@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {Transaction, Transactions} from '../logic'
+import {Transaction, Transactions} from '../types'
 
 export function useTransactions() {
   const [transactions, setState] = useState<Transactions>([])

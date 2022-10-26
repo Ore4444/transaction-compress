@@ -1,4 +1,5 @@
-import {compressTransactions, Transaction} from './logic'
+import {compressTransactions} from './logic'
+import { Transaction } from './types';
 
 const transactionsNonCompressable = Array<Transaction>(
   { tradingParty: "me", counterparty: "you", amount: -400 },

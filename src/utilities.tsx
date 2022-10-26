@@ -9,6 +9,6 @@ export const logServer = (...messages: string[]) => {
 
 export const objectsDataToCsvURI = (data: Array<{[key: string]: any}>) => encodeURI(
   `data:text/csv;charset=utf-8,${
-    data.map((row, index) =>  Object.values(row).join(',')).join(`\n`)
+    data.map(row => Object.values(row).join(',')).join(`\n`)
   }`
 );

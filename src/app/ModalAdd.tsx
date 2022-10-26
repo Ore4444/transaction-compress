@@ -1,6 +1,6 @@
 import 'bootstrap/js/dist/modal';
 import { useRef } from 'react';
-import { Transaction } from '../logic';
+import { Transaction } from '../types';
 
 interface Props {
   addTransactionFn: (transaction: Transaction) => void
@@ -17,8 +17,8 @@ function ModalAdd({addTransactionFn}: Props) {
       counterparty: counterpartyInput.current!.value,
       amount: parseInt(amountInput.current!.value),
     })
+
     event.preventDefault()
-    console.log(closeButton.current)
     closeButton.current!.click()
     event.currentTarget.reset()
   }

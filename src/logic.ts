@@ -11,7 +11,7 @@ const canCompressTwo = (tr1: Transaction, tr2: Transaction): boolean => {
 }
 
 const compressAmount = (tr: Transaction, amount: Amount): Transaction => {
-  return {...tr, ...{amount: tr.amount += amount}}
+  return {...tr, ...{amount: tr.amount + amount}}
 }
 
 export type Transactions = Array<Transaction>

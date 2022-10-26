@@ -7,7 +7,7 @@ export const logServer = (...messages: string[]) => {
   body: JSON.stringify(messages)})
 }
 
-export const objectsDataToCsvURI = (data: Array<{[key: string]: string | number}>) => encodeURI(
+export const objectsDataToCsvURI = (data: Array<{[key: string]: any}>) => encodeURI(
   `data:text/csv;charset=utf-8,${
     data.map((row, index) =>  Object.values(row).join(',')).join(`\n`)
   }`
